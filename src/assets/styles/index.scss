@@ -1,0 +1,251 @@
+@import './variables.scss';
+
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+::placeholder {
+  color: $grey-300 !important;
+}
+select {
+  color: $grey-700;
+}
+
+// button
+.btn-sorting {
+  font-weight: bold;
+  color:#A1A3AC;
+  border-color:#A1A3AC;
+  border-radius: 3px;
+  font-size: 14px;
+  &::after{
+    content: url(../images/arrow-up-grey.svg);
+  }
+  &:hover {
+    color: $blue-700;
+    border-color: $blue-700;
+    &::after{
+      content: url(../images/arrow-up-blue.svg);
+    }
+  }
+}
+
+//預設"未到期"樣式
+.badge-shopCenter {       
+  background: $yellow-50;
+  border: 1px solid $yellow-700;
+  color: $yellow-700;
+  border-radius: 14px;
+  font-size: 14px;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $yellow-700;
+    background-color: $yellow-50; 
+    border-color: $yellow-700;
+  } 
+}
+
+//預設"未到期"樣式
+.badge-evaluateCenter {
+  background: $yellow-50;
+  border: 1px solid $yellow-700;
+  color: $yellow-700;
+  border-radius: 14px;
+  font-size: 14px;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $yellow-700;
+    background-color: $yellow-50; 
+    border-color: $yellow-700;
+  } 
+}
+
+.btn-QRcode {
+  border: 1px solid $blue-700;
+  color: $blue-700;
+  border-radius: 19px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  &:hover,
+  &:active,
+  &:focus  {
+    color: #fff;
+    background-color: $blue-200;
+  }
+  @media (min-width: 768px) {
+    width: max-content;
+    min-width: 150px;
+  }
+}
+
+.btn-program {
+  border: 1px solid $blue-700;
+  background-color: $blue-50;
+  color: $blue-700;
+  border-radius: 19px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  &:hover,
+  &:active,
+  &:focus  {
+    color: #fff;
+    background-color: $blue-200;
+  }
+  @media (min-width: 768px) {
+    width: max-content;
+    min-width: 150px;
+  }
+}
+
+.btn-repurchase {
+  border: 1px solid $pink-700;
+  color: $pink-700;
+  border-radius: 19px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  &:hover,
+  &:active,
+  &:focus  {
+    color: $pink-700;
+    background-color: $pink-50;
+  }
+  @media (min-width: 768px) {
+    width: max-content;
+    min-width: 150px;
+  }
+}
+
+// button 顏色切換
+.btn-pink {
+  background: $pink-50;
+  border-color: $pink-700;
+  color: $pink-700;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $pink-700;
+    background-color: $pink-50; 
+    border-color: $pink-700;
+  } 
+}
+.btn-grey {
+  background: $grey-50;
+  border-color: $grey-400;
+  color: $grey-400;
+  &:hover,
+  &:active,
+  &:focus {
+    color: $grey-400;
+    background-color: $grey-50; 
+    border-color: $grey-400;
+  } 
+}
+
+// text color
+.text-blue-700 {
+  color: $blue-700;
+}
+.text-blue-600 {
+  color: $blue-600;
+}
+.text-blue-300 {
+  color: $blue-300;
+}
+.text-blue-200 {
+  color: $blue-200;
+}
+.text-pink-700 {
+  color: $pink-700;
+}
+.text-pink-600 {
+  color: $pink-600;
+}
+.text-pink-50 {
+  color: $pink-50;
+}
+.text-grey-700 {
+  color: $grey-700;
+}
+.text-grey-400 {
+  color: $grey-400;
+}
+.text-grey-300 {
+  color: $grey-300;
+}
+.text-yellow-700 {
+  color: $yellow-700;
+}
+
+//background-color
+.bg-blue-700 {
+  background: $blue-700;
+}
+.bg-yellow-50 {
+  background: $yellow-50;
+}
+.bg-grey-50 {
+  background: $grey-50;
+}
+.bg-pink-50 {
+  background: $pink-50;
+}
+
+// border-color
+.border-blue-700 {
+  border: 1px solid $blue-700;
+}
+.border-end-blue-700 {
+  border-right: 1px solid $blue-700;
+}
+.border-grey-300 {
+  border: 1px solid $grey-300;
+}
+.border-end-grey-300 {
+  border-right: 1px solid $grey-300;
+}
+.border-start-grey-300 {
+  border-left: 1px solid $grey-300;
+}
+.border-grey-400 {
+  border: 1px solid $grey-400;
+}
+.border-pink-700 {
+  border: 1px solid $pink-700;
+}
+
+// font-size
+.fs-5-half {
+  font-size: 1.125rem;
+}
+.fs-7 {
+  font-size: 0.875rem;   
+}
+.fs-8 {
+  font-size: 0.75rem;
+}
+
+//padding
+.px-2-half {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+.px-3-half {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}

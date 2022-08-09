@@ -1,0 +1,273 @@
+h1 {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+::-moz-placeholder {
+  color: #A1A3AC !important;
+}
+
+:-ms-input-placeholder {
+  color: #A1A3AC !important;
+}
+
+::placeholder {
+  color: #A1A3AC !important;
+}
+
+select {
+  color: #5A6268;
+}
+
+.btn-sorting {
+  font-weight: bold;
+  color: #A1A3AC;
+  border-color: #A1A3AC;
+  border-radius: 3px;
+  font-size: 14px;
+}
+.btn-sorting::after {
+  content: url(../images/arrow-up-grey.svg);
+}
+.btn-sorting:hover {
+  color: #29598F;
+  border-color: #29598F;
+}
+.btn-sorting:hover::after {
+  content: url(../images/arrow-up-blue.svg);
+}
+
+.badge-shopCenter {
+  background: #FBF7E1;
+  border: 1px solid #D8B93B;
+  color: #D8B93B;
+  border-radius: 14px;
+  font-size: 14px;
+}
+.badge-shopCenter:hover, .badge-shopCenter:active, .badge-shopCenter:focus {
+  color: #D8B93B;
+  background-color: #FBF7E1;
+  border-color: #D8B93B;
+}
+
+.badge-evaluateCenter {
+  background: #FBF7E1;
+  border: 1px solid #D8B93B;
+  color: #D8B93B;
+  border-radius: 14px;
+  font-size: 14px;
+}
+.badge-evaluateCenter:hover, .badge-evaluateCenter:active, .badge-evaluateCenter:focus {
+  color: #D8B93B;
+  background-color: #FBF7E1;
+  border-color: #D8B93B;
+}
+
+.btn-QRcode {
+  border: 1px solid #29598F;
+  color: #29598F;
+  border-radius: 19px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+}
+.btn-QRcode:hover, .btn-QRcode:active, .btn-QRcode:focus {
+  color: #fff;
+  background-color: #2BABC6;
+}
+@media (min-width: 768px) {
+  .btn-QRcode {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    min-width: 150px;
+  }
+}
+
+.btn-program {
+  border: 1px solid #29598F;
+  background-color: #E9F6F9;
+  color: #29598F;
+  border-radius: 19px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+}
+.btn-program:hover, .btn-program:active, .btn-program:focus {
+  color: #fff;
+  background-color: #2BABC6;
+}
+@media (min-width: 768px) {
+  .btn-program {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    min-width: 150px;
+  }
+}
+
+.btn-repurchase {
+  border: 1px solid #CA726F;
+  color: #CA726F;
+  border-radius: 19px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+}
+.btn-repurchase:hover, .btn-repurchase:active, .btn-repurchase:focus {
+  color: #CA726F;
+  background-color: #FFE1E0;
+}
+@media (min-width: 768px) {
+  .btn-repurchase {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    min-width: 150px;
+  }
+}
+
+.btn-pink {
+  background: #FFE1E0;
+  border-color: #CA726F;
+  color: #CA726F;
+}
+.btn-pink:hover, .btn-pink:active, .btn-pink:focus {
+  color: #CA726F;
+  background-color: #FFE1E0;
+  border-color: #CA726F;
+}
+
+.btn-grey {
+  background: #EFF0F3;
+  border-color: #979797;
+  color: #979797;
+}
+.btn-grey:hover, .btn-grey:active, .btn-grey:focus {
+  color: #979797;
+  background-color: #EFF0F3;
+  border-color: #979797;
+}
+
+.text-blue-700 {
+  color: #29598F;
+}
+
+.text-blue-600 {
+  color: #185993;
+}
+
+.text-blue-300 {
+  color: #53A9C3;
+}
+
+.text-blue-200 {
+  color: #2BABC6;
+}
+
+.text-pink-700 {
+  color: #CA726F;
+}
+
+.text-pink-600 {
+  color: #D76C6C;
+}
+
+.text-pink-50 {
+  color: #FFE1E0;
+}
+
+.text-grey-700 {
+  color: #5A6268;
+}
+
+.text-grey-400 {
+  color: #979797;
+}
+
+.text-grey-300 {
+  color: #A1A3AC;
+}
+
+.text-yellow-700 {
+  color: #D8B93B;
+}
+
+.bg-blue-700 {
+  background: #29598F;
+}
+
+.bg-yellow-50 {
+  background: #FBF7E1;
+}
+
+.bg-grey-50 {
+  background: #EFF0F3;
+}
+
+.bg-pink-50 {
+  background: #FFE1E0;
+}
+
+.border-blue-700 {
+  border: 1px solid #29598F;
+}
+
+.border-end-blue-700 {
+  border-right: 1px solid #29598F;
+}
+
+.border-grey-300 {
+  border: 1px solid #A1A3AC;
+}
+
+.border-end-grey-300 {
+  border-right: 1px solid #A1A3AC;
+}
+
+.border-start-grey-300 {
+  border-left: 1px solid #A1A3AC;
+}
+
+.border-grey-400 {
+  border: 1px solid #979797;
+}
+
+.border-pink-700 {
+  border: 1px solid #CA726F;
+}
+
+.fs-5-half {
+  font-size: 1.125rem;
+}
+
+.fs-7 {
+  font-size: 0.875rem;
+}
+
+.fs-8 {
+  font-size: 0.75rem;
+}
+
+.px-2-half {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.px-3-half {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+}/*# sourceMappingURL=index.css.map */
