@@ -47,27 +47,27 @@ select {
   content: url(../images/arrow-up-blue.svg);
 }
 
-.badge-shopCenter {
+.badge-center {
   background: #FBF7E1;
   border: 1px solid #D8B93B;
   color: #D8B93B;
   border-radius: 14px;
   font-size: 14px;
 }
-.badge-shopCenter:hover, .badge-shopCenter:active, .badge-shopCenter:focus {
+.badge-center:hover, .badge-center:active, .badge-center:focus {
   color: #D8B93B;
   background-color: #FBF7E1;
   border-color: #D8B93B;
 }
 
-.badge-evaluateCenter {
+.badge-center {
   background: #FBF7E1;
   border: 1px solid #D8B93B;
   color: #D8B93B;
   border-radius: 14px;
   font-size: 14px;
 }
-.badge-evaluateCenter:hover, .badge-evaluateCenter:active, .badge-evaluateCenter:focus {
+.badge-center:hover, .badge-center:active, .badge-center:focus {
   color: #D8B93B;
   background-color: #FBF7E1;
   border-color: #D8B93B;

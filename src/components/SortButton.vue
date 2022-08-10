@@ -14,10 +14,10 @@
 <script setup>
 import { defineProps } from 'vue'
 
+// eslint-disable-next-line no-unused-vars
 const props = defineProps({
   sortType: Object
 })
-console.log(props.sortType)
 </script>
 
 <style lang="scss" scoped>

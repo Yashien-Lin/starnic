@@ -7,8 +7,7 @@
     <div class="card__title row">
       <div class="col-2 col-lg-1">
         <div
-          class="card__title-imgBox rounded-circle overflow-hidden m-md-auto"
-        >
+          class="card__title-imgBox rounded-circle overflow-hidden m-md-auto">
           <img :src="item.img" alt="shop image" />
         </div>
       </div>
@@ -16,7 +15,7 @@
         <div class="card__title-details d-flex align-items-start gap-1">
           <h2
             :title="item.name"
-            :class="{ 'text-truncate': item.isTitleOpen }"
+            :class="{ 'text-truncate': !item.isTitleOpen }"
             class="text-blue-600"
             data-bs-toggle="tooltip"
             data-bs-placement="top"
@@ -37,17 +36,10 @@
     <div class="card__centerType row align-items-md-center">
       <div class="col-lg-1"></div>
       <div class="card__centerType-time col-12 col-md-4 col-lg-4">
-        <!-- <CenterBadge :shopStatusId="item.shop_center.status"/> -->
-        <a
-          href="#"
-          class="badge badge-shopCenter"
-          :class="{
-            'btn-grey': item.shop_center.status === 0,
-            'btn-pink': item.shop_center.status === 1
-          }"
-        >
-          {{ item.shop_center.shop_center_name }}
-        </a>
+        <CenterBadge
+          :statusId="item.shop_center.status"
+          :badgeName="item.shop_center.shop_center_name"
+        />
         <span
           v-if="item.shop_center.status === 0"
           class="fs-7 text-grey-700 fw-bold"
@@ -57,11 +49,9 @@
           v-else-if="item.shop_center.status === 1"
           class="fs-7 text-pink-600"
         >
-          {{ item.shop_center.startAt }} - {{ item.shop_center.endAt }}</span
-        >
+          {{ item.shop_center.startAt }} - {{ item.shop_center.endAt }}</span>
         <span v-else class="fs-7 text-grey-700">
-          {{ item.shop_center.startAt }} - {{ item.shop_center.endAt }}</span
-        >
+          {{ item.shop_center.startAt }} - {{ item.shop_center.endAt }}</span>
       </div>
       <div class="d-flex justify-content-between col-12 col-md-5 col-lg-5">
         <div
@@ -73,10 +63,8 @@
           <span class="fs-8">{{ item.title }}</span>
         </div>
       </div>
-      <div
-        class="text-center col-12 col-md-3 col-lg-2 d-flex flex-column align-items-center flex-md-column-reverse mt-3 mt-md-0"
-      >
-        <ProgramButton
+      <div class="text-center col-12 col-md-3 col-lg-2 d-flex flex-column align-items-center flex-md-column-reverse mt-3 mt-md-0">
+        <ProcessingActionBtn
           :shopStatusId="item.shop_center.status"
           :isTypeShop="true"
         />
@@ -91,17 +79,10 @@
     <div class="card__centerType row align-items-md-center">
       <div class="col-lg-1"></div>
       <div class="card__centerType-time col-12 col-md-4 col-lg-4">
-        <!-- <CenterBadge /> -->
-        <a
-          href="#"
-          class="badge badge-evaluateCenter"
-          :class="{
-            'btn-grey': item.evaluate_center.status === 0,
-            'btn-pink': item.evaluate_center.status === 1
-          }"
-        >
-          評價中心
-        </a>
+        <CenterBadge
+          :statusId="item.evaluate_center.status"
+          badgeName="評價中心"
+        />
         <span
           v-if="item.evaluate_center.status === 0"
           class="fs-7 text-grey-700 fw-bold"
@@ -111,21 +92,16 @@
           v-else-if="item.evaluate_center.status === 1"
           class="fs-7 text-pink-600"
         >
-          {{ item.evaluate_center.startAt }} -
-          {{ item.evaluate_center.endAt }}</span
+          {{ item.evaluate_center.startAt }} - {{ item.evaluate_center.endAt }}</span>
+        <span
+          v-else
+          class="fs-7 text-grey-700"
         >
-        <span v-else class="fs-7 text-grey-700">
-          {{ item.evaluate_center.startAt }} -
-          {{ item.evaluate_center.endAt }}</span
-        >
+            {{ item.evaluate_center.startAt }} - {{ item.evaluate_center.endAt }}</span>
       </div>
-      <div
-        class="d-flex justify-content-between mb-md-0 col-12 col-md-5 col-lg-5"
-      ></div>
-      <div
-        class="text-center col-12 col-md-3 col-lg-2 d-flex flex-column align-items-center flex-md-column-reverse"
-      >
-        <ProgramButton
+      <div class="d-flex justify-content-between mb-md-0 col-12 col-md-5 col-lg-5"></div>
+      <div class="text-center col-12 col-md-3 col-lg-2 d-flex flex-column align-items-center flex-md-column-reverse">
+        <ProcessingActionBtn
           v-if="item.evaluate_center.status!=2"
           :evaluateStatusId="item.evaluate_center.status"
           :isTypeShop="false"
@@ -133,8 +109,9 @@
         <span
           v-if="item.evaluate_center.status === 1"
           class="text-pink-700 fw-bold fs-8"
-          >你購買的專案已到期</span
         >
+          你購買的專案已到期
+        </span>
       </div>
     </div>
   </div>
@@ -142,8 +119,8 @@
 
 <script setup>
 import { defineProps } from 'vue'
-import ProgramButton from '@/components/ProgramButton.vue'
-// import CenterBadge from '@/components/CenterBadge.vue'
+import ProcessingActionBtn from '@/components/ProcessingActionBtn.vue'
+import CenterBadge from '@/components/CenterBadge.vue'
 
 const props = defineProps({
   processingDataList: Object
@@ -153,7 +130,6 @@ const toggleTrigger = (id) => {
   props.processingDataList.forEach((item) => {
     if (item.id === id) {
       item.isTitleOpen = !item.isTitleOpen
-      // console.log('test: ', id, item.isTitleOpen)
     }
   })
 }
@@ -177,8 +153,7 @@ const toggleTrigger = (id) => {
     }
     &__centerType-time {
       margin: 16px 0;
-      .badge-shopCenter ,
-      .badge-evaluateCenter {
+      .badge-center {
         margin-right: 10px;
       }
     }

@@ -1,24 +1,22 @@
 <template>
   <a
     href="#"
-    class="badge badge-shopCenter"
+    class="badge badge-center"
     :class="{
-      'btn-grey': shopStatusId === 0,
-      'btn-pink': shopStatusId === 1
+      'btn-grey': statusId === 0,
+      'btn-pink': statusId === 1
     }"
   >
-    {{ item.shop_center.shop_center_name }}
+    {{ badgeName }}
   </a>
 </template>
 
 <script setup>
 import { defineProps } from 'vue'
 
+// eslint-disable-next-line no-unused-vars
 const props = defineProps({
-  shopStatusId: Number
+  statusId: Number,
+  badgeName: String
 })
-console.log(props.shopStatusId)
 </script>
-
-<style lang="scss" scoped>
-</style>

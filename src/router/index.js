@@ -1,6 +1,5 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomePage from '../views/HomePage.vue'
-// import ProcessingShop from '@/components/ProcessingShop.vue'
 
 const routes = [
   {

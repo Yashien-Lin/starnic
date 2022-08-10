@@ -1,8 +1,8 @@
 <template>
   <button
-    type="button"
     :class="[isTypeShop ? shopButton.className : evaluateButton.className]"
     class="btn mb-2"
+    type="button"
   >
     {{ isTypeShop ? shopButton.buttonName : evaluateButton.buttonName }}
   </button>

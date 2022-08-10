@@ -38,8 +38,8 @@ select {
   }
 }
 
-//預設"未到期"樣式
-.badge-shopCenter {       
+//預設"未到期"樣式(黃色)
+.badge-center {  
   background: $yellow-50;
   border: 1px solid $yellow-700;
   color: $yellow-700;
@@ -53,23 +53,6 @@ select {
     border-color: $yellow-700;
   } 
 }
-
-//預設"未到期"樣式
-.badge-evaluateCenter {
-  background: $yellow-50;
-  border: 1px solid $yellow-700;
-  color: $yellow-700;
-  border-radius: 14px;
-  font-size: 14px;
-  &:hover,
-  &:active,
-  &:focus {
-    color: $yellow-700;
-    background-color: $yellow-50; 
-    border-color: $yellow-700;
-  } 
-}
-
 .btn-QRcode {
   border: 1px solid $blue-700;
   color: $blue-700;
@@ -83,13 +66,13 @@ select {
   &:focus  {
     color: #fff;
     background-color: $blue-200;
+    box-shadow: 0 0 0 0.15rem $blue-700;
   }
   @media (min-width: 768px) {
     width: max-content;
     min-width: 150px;
   }
 }
-
 .btn-program {
   border: 1px solid $blue-700;
   background-color: $blue-50;
@@ -101,16 +84,17 @@ select {
   width: 100%;
   &:hover,
   &:active,
-  &:focus  {
+  &:focus {
     color: #fff;
     background-color: $blue-200;
-  }
+    box-shadow: 0 0 0 0.15rem $blue-700;
+    // outline: 0;
+  }  
   @media (min-width: 768px) {
     width: max-content;
     min-width: 150px;
   }
 }
-
 .btn-repurchase {
   border: 1px solid $pink-700;
   color: $pink-700;
@@ -121,9 +105,69 @@ select {
   width: 100%;
   &:hover,
   &:active,
-  &:focus  {
+  &:focus {
     color: $pink-700;
     background-color: $pink-50;
+    box-shadow: 0 0 0 0.15rem $pink-700;
+  }
+  @media (min-width: 768px) {
+    width: max-content;
+    min-width: 150px;
+  }
+}
+.btn-pass {
+  border: 1px solid $green-700;
+  background-color: $green-700;
+  color: #fff;
+  border-radius: 19px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  &:hover,
+  &:active,
+  &:focus  {
+    color: #fff;
+    background-color: $green-700;
+  }
+  @media (min-width: 768px) {
+    width: max-content;
+    min-width: 150px;
+  }
+}
+.btn-auditing {
+  border: 1px solid $grey-300;
+  color: $grey-300;
+  border-radius: 19px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  &:hover,
+  &:active,
+  &:focus  {
+    color: $grey-300;
+    background-color: #fff;
+  }
+  @media (min-width: 768px) {
+    width: max-content;
+    min-width: 150px;
+  }
+}
+.btn-fail {
+  border: 1px solid $pink-700;
+  background-color: $pink-700;
+  color: #fff;
+  border-radius: 19px;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100%;
+  &:hover,
+  &:active,
+  &:focus  {
+    color: #fff;
+    background-color: $pink-700;
   }
   @media (min-width: 768px) {
     width: max-content;
@@ -190,6 +234,9 @@ select {
 }
 .text-yellow-700 {
   color: $yellow-700;
+}
+.text-green-700 {
+  color: $green-700;
 }
 
 //background-color

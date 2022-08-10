@@ -1,49 +1,49 @@
 <template>
     <section class="search">
-    <div class="container">
-      <form class="row align-items-center position-relative px-2">
-        <div class="col-8 col-md-3 ps-0">
-          <input
-            type="search"
-            class="form-control search-input"
-            placeholder="關鍵字"
-          />
-        </div>
-        <div class="col-md-3 d-none d-md-block">
-          <select class="form-select input-grey">
-            <option selected disabled>商家區域</option>
-            <option value="1">台北</option>
-          </select>
-        </div>
-        <div class="col-md-3 d-none d-md-block">
-          <select class="form-select input-grey">
-            <option selected disabled>方案</option>
-            <option value="1">xxx</option>
-          </select>
-        </div>
-        <div class="col-4 col-md-3 px-0">
-          <button type="button" class="btn btn-search">搜尋</button>
-        </div>
-        <div class="search-side-buttons d-flex gap-2 justify-content-end">
-          <button type="button" class="btn p-0">
-            <img
-              src="@/assets/images/trash.svg"
-              alt="trash can icon"
-              class="me-1"
+      <div class="container">
+        <form class="row align-items-center position-relative px-2">
+          <div class="col-8 col-md-3 ps-0">
+            <input
+              type="search"
+              class="form-control search-input"
+              placeholder="關鍵字"
             />
-            <span class="fs-8 text-grey-300">清除搜尋</span>
-          </button>
-          <button type="button" class="btn d-md-none p-0">
-            <img
-              src="@/assets/images/settings.svg "
-              alt="trash can icon"
-              class="me-1"
-            />
-            <span class="fs-8 text-grey-300">進階搜尋</span>
-          </button>
-        </div>
-      </form>
-    </div>
+          </div>
+          <div class="col-md-3 d-none d-md-block">
+            <select class="form-select input-grey">
+              <option selected disabled>商家區域</option>
+              <option value="1">台北</option>
+            </select>
+          </div>
+          <div class="col-md-3 d-none d-md-block">
+            <select class="form-select input-grey">
+              <option selected disabled>方案</option>
+              <option value="1">xxx</option>
+            </select>
+          </div>
+          <div class="col-4 col-md-3 px-0">
+            <button type="button" class="btn btn-search">搜尋</button>
+          </div>
+          <div class="search-side-buttons d-flex gap-2 justify-content-end">
+            <button type="button" class="btn p-0">
+              <img
+                src="@/assets/images/trash.svg"
+                alt="trash can icon"
+                class="me-1"
+              />
+              <span class="fs-8 text-grey-300">清除搜尋</span>
+            </button>
+            <button type="button" class="btn d-md-none p-0">
+              <img
+                src="@/assets/images/settings.svg "
+                alt="trash can icon"
+                class="me-1"
+              />
+              <span class="fs-8 text-grey-300">進階搜尋</span>
+            </button>
+          </div>
+        </form>
+      </div>
   </section>
 </template>
 
@@ -86,11 +86,9 @@
   .search-select-indicator-color {
       color:#000 !important;
     }
-
   .search-select:after{
     color: #000;
   }
-
   .btn-search {
     background: $blue-200;
     color: #fff;
